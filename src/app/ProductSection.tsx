@@ -12,18 +12,22 @@ function isAvailable(arr1?: string[], arr2?: string[]): boolean {
   return arr1.some((item) => arr2.includes(item));
 }
 
-const ProductSection = () => {
+const ProductSection = (props:any) => {
+  //console.log(props.products)
   const searchParams = useSearchParams();
   const paramsObj = convertStringToQueriesObject();
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/shoes")
-      .then((response) => response.json())
-      .then((data) => {
-        setProducts(data);
-      });
-  }, []);
+    // fetch("http://localhost:8000/shoes")
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     setProducts(data);
+    //   });
+
+    setProducts(props?.products)
+  }, [props]);
+
 
   // let filteredProducts = products.filter((product) => {
   //   const hasCategories = isAvailable(product.types, paramsObj?.type);
@@ -60,9 +64,10 @@ const ProductSection = () => {
             loader={() => product.image_url}
             src={product.image_url}
             alt={product.brand}
+            unoptimized={true}
             width={300}
             height={300}
-            className="rounded-md shadow-sm aspect-[4/5] object-cover object-top"
+            className="rounded-md shadow-sm aspect-[4/5] object-cover object-top w-full h-auto"
             style={{ objectFit: "contain" }}
           />
           <div className="space-y-1">
