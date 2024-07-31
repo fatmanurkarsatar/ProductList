@@ -3,11 +3,11 @@ export const products = [
         "id": 1,
         "gender": "Women",
         "brand": "Nike",
-        "color": ["Red"],
+        "color": "Red",
         "size": 36,
         "price": 120,
         "type": "Running",
-        "image_url": "https://cdn.akakce.com/z/nike/nike-revolution-6-nn-kirmizi-kadin-si-dd1096-607.jpg"
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEEsM1__dF8NLkznMjw91FQA2yqeQbDwdwGA&usqp=CAU"
       },
       {
         "id": 2,
@@ -117,7 +117,7 @@ export const products = [
         "size": 33,
         "price": 85,
         "type": "Casual",
-        "image_url": "https://akn-barcin.a-cdn.akinoncloud.com/products/2020/08/18/103982/e8ded4ce-322f-4b38-ab8c-91ce3d7a83d4_size900x900_cropCenter.jpg"
+        "image_url": "https://korayspor.mncdn.com/mnresize/1920/-/korayspor/products/AR4162-400_11.jpg"
       },
       {
         "id": 13,
@@ -147,7 +147,7 @@ export const products = [
         "size": 37,
         "price": 90,
         "type": "running",
-        "image_url": "https://sporthink.mncdn.com/mnresize/1080/1080/sporthink/uploads/products/original_148854_1.jpeg"
+        "image_url": "https://korayspor.mncdn.com/mnresize/1920/-/korayspor/products/VN0A3B3U5U71_1.jpg"
       },
       {
         "id": 16,
@@ -187,7 +187,7 @@ export const products = [
         "size": 36,
         "price": 65,
         "type": "Walking",
-        "image_url": "https://akn-ss.a-cdn.akinoncloud.com/products/2022/12/14/616630/fcdee85c-1fe0-4cdd-a164-d2c956f62659_size3840_cropCenter.jpg"
+        "image_url": "https://korayspor.mncdn.com/mnresize/480/-/korayspor/products/FD6454-100_1.jpg"
       },
       {
         "id": 20,
@@ -217,7 +217,7 @@ export const products = [
         "size": 37,
         "price": 65,
         "type": "Casual",
-        "image_url": "https://8f08a8.cdn.akinoncloud.com/products/2022/09/02/448985/1bc22ad1-e463-4e87-be1b-47801cec0d4d_size2010x2010_cropCenter.jpg"
+        "image_url": "https://korayspor.mncdn.com/mnresize/1920/-/korayspor/products/39520501_1.jpg"
       },
       {
         "id": 23,
@@ -232,12 +232,12 @@ export const products = [
       {
         "id": 24,
         "gender": "Women",
-        "brand": "Nike",
+        "brand": "Adidas",
         "color": "White",
         "size": 38,
         "price": 55,
         "type": "Soccer",
-        "image_url": "https://0990b9.a-cdn.akinoncloud.com/products/2023/02/22/438431/b8d4a1c2-d322-4219-8947-b60e3f125eca_size3840x3840_cropCenter.jpg"
+        "image_url": "https://korayspor.mncdn.com/mnresize/480/-/korayspor/products/10737701_1.jpg"
       },
       {
         "id": 25,
@@ -252,12 +252,12 @@ export const products = [
       {
         "id": 26,
         "gender": "Men",
-        "brand": "Nike",
+        "brand": "Puma",
         "color": "Blue",
         "size": 42,
         "price": 64,
         "type": "Soccer",
-        "image_url": "https://0990b9.a-cdn.akinoncloud.com/products/2020/04/06/206010/c5d4313d-0902-4496-963c-5570e55c71a7.jpg"
+        "image_url": "https://korayspor.mncdn.com/mnresize/1920/-/korayspor/products/10747701_1.jpg"
       },
       {
         "id": 27,
@@ -273,11 +273,11 @@ export const products = [
         "id": 28,
         "gender": "Kids",
         "brand": "crocs",
-        "color": "Green",
+        "color": "Blue",
         "size": 34,
         "price": 85,
         "type": "Casual",
-        "image_url": "https://akn-spx.a-cdn.akinoncdn.com/products/2023/04/27/1144605/9b3e3120-f46e-4aff-b34f-705fef87f55b.jpg"
+        "image_url": "https://korayspor.mncdn.com/mnresize/1920/-/korayspor/products/8701-BLUE-NAVY_1.jpg"
       },
       {
         "id": 29,
