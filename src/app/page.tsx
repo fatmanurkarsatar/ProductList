@@ -122,10 +122,10 @@ export default function Page() {
 
   const sortByPrice = (sortType: any) =>{
     if(sortType === 'toLow'){
-      const sorted = [...filteredProducts].sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+      const sorted = [...filteredProducts].sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
       setFilteredProducts(sorted);
     }else{
-      const sorted = [...filteredProducts].sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+      const sorted = [...filteredProducts].sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
       setFilteredProducts(sorted);    }
   }
 
