@@ -34,8 +34,8 @@ interface Product {
 }
 
 const sortOptions = [
-  { name: "Price: Low to High", href: "#", current: false },
-  { name: "Price: High to Low", href: "#", current: false },
+  { name: "Price: Low to High", href: "#", current: false, type:'toHigh' },
+  { name: "Price: High to Low", href: "#", current: false, type:'toLow' },
 ];
 
 function classNames(...classes: string[]) {
@@ -120,6 +120,15 @@ export default function Page() {
     setFavoriteCount(count);
   };
 
+  const sortByPrice = (sortType: any) =>{
+    if(sortType === 'toLow'){
+      const sorted = [...filteredProducts].sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+      setFilteredProducts(sorted);
+    }else{
+      const sorted = [...filteredProducts].sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+      setFilteredProducts(sorted);    }
+  }
+
   return (
     <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 col-12 container">
       <div className="flex items-center justify-between border-b border-gray-200 pb-6 pt-24">
@@ -165,6 +174,7 @@ export default function Page() {
                           : "text-gray-500",
                         "block px-4 py-2 text-sm hover:bg-gray-100"
                       )}
+                      onClick={() => sortByPrice(option.type)}
                     >
                       {option.name}
                     </a>

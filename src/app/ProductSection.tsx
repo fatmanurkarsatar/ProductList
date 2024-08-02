@@ -66,7 +66,7 @@ const ProductSection: React.FC<ProductSectionProps> = ({ products, onAddToCart, 
               {product.color}
             </p>
             <div className="flex justify-between items-center">
-              <p className="font-semibold">Price: {product.price}</p>
+              <p className="font-semibold">Price: {product.price}$</p>
             </div>
             {addedToCart.includes(product.id) ? (
               <p className="text-green-600 mt-2">Sepete Eklendi</p>
