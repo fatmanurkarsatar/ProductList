@@ -8,6 +8,7 @@
       "size": 36,
       "price": "120$",
       "type": "Running",
+
       "image_url": "https://productimages.hepsiburada.net/s/777/375-500/110000723554076.jpg"
     },
     {
@@ -18,6 +19,7 @@
       "size": 42,
       "price": "100$",
       "type": "Basketball",
+      
       "image_url": "https://productimages.hepsiburada.net/s/275/550/110000261591668.jpg"
     },
     {
@@ -28,6 +30,7 @@
       "size": 30,
       "price": "50$",
       "type": "Casual",
+      
       "image_url": "https://korayspor.mncdn.com/mnresize/480/-/korayspor/products/38937111_1.jpg"
     },
     {
@@ -38,6 +41,7 @@
       "size": 37,
       "price": "80$",
       "type": "Walking",
+      
       "image_url": "https://img1-newbalance.mncdn.com/mnpadding/960/960/FFFFFF/newbalance/products/NBWS109BBL_1.jpg"
     },
     {

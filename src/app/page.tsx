@@ -50,8 +50,9 @@ export default function Page() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const [addedToCart, setAddedToCart] = useState<number[]>([]);
   const [favoriteCount, setFavoriteCount] = useState<number>(0);
+  const [searchQuery, setSearchQuery] = useState<string>(""); // Arama alanı için state
 
-  useEffect(() => {
+  useEffect(() => { //json server dan datalar alınır
     fetch("http://localhost:8000/filters")
       .then((response) => response.json())
       .then((data) => setFilters(data));
@@ -63,6 +64,10 @@ export default function Page() {
         setFilteredProducts(data);
       });
   }, []);
+
+  useEffect(() => {
+    filterProductList(activeFilter, searchQuery); // Arama sorgusu değiştiğinde filtreleme
+  }, [searchQuery]);
 
   function handleChange(filterLabel: string, sectionId: string) {
     const newFilter = { filterLabel, sectionId };
@@ -79,20 +84,30 @@ export default function Page() {
       updatedFilters = [...activeFilter, newFilter];
     }
     setActiveFilter(updatedFilters);
-    filterProductList(updatedFilters);
+    filterProductList(updatedFilters, searchQuery);
   }
 
-  const filterProductList = (activeFilter: ActiveFilter[]) => {
-    if (activeFilter.length === 0) {
-      setFilteredProducts(products);
-      return;
+  const filterProductList = (activeFilter: ActiveFilter[], query: string) => {
+    let filtered = products;
+
+    if (activeFilter.length > 0) {
+      filtered = filtered.filter((product) =>
+        activeFilter.every(
+          (acfilter) => product[acfilter.sectionId] === acfilter.filterLabel
+        )
+      );
     }
 
-    const filtered = products.filter((product) =>
-      activeFilter.every(
-        (acfilter) => product[acfilter.sectionId] === acfilter.filterLabel
+    if (query) {
+      filtered = filtered.filter((product) =>
+        product.brand.toLowerCase().includes(query.toLowerCase()) ||
+        product.color.toLowerCase().includes(query.toLowerCase()) ||
+        product.price.toLowerCase().includes(query.toLowerCase()) ||
+        product.type.toLowerCase().includes(query.toLowerCase()) ||
+        product.gender.toLowerCase().includes(query.toLowerCase()) 
       )
-    );
+    };
+    
 
     setFilteredProducts(filtered);
   };
@@ -105,14 +120,20 @@ export default function Page() {
     setFavoriteCount(count);
   };
 
-  
-
   return (
     <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 col-12 container">
       <div className="flex items-center justify-between border-b border-gray-200 pb-6 pt-24">
         <h1 className="text-4xl font-bold tracking-tight text-gray-900">Shoes</h1>
 
         <div className="flex items-center space-x-4">
+          <input
+            type="text"
+            placeholder="Search products..."
+            className="p-2 border border-gray-300 rounded-md"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+
           <button
             type="button"
             onClick={() => setMobileFiltersOpen(true)}
