@@ -27,7 +27,7 @@
       "color": "Green",
       "size": 30,
       "price": "50$",
-      "type": "Casual",
+      "type": "Casual",    
       "image_url": "https://korayspor.mncdn.com/mnresize/480/-/korayspor/products/38937111_1.jpg"
     },
     {
@@ -37,7 +37,7 @@
       "color": "Black",
       "size": 37,
       "price": "80$",
-      "type": "Walking",
+      "type": "Walking",    
       "image_url": "https://img1-newbalance.mncdn.com/mnpadding/960/960/FFFFFF/newbalance/products/NBWS109BBL_1.jpg"
     },
     {
